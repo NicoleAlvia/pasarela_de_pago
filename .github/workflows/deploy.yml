@@ -1,5 +1,7 @@
+# Nombre del workflow
 name: CI/CD PayPhone
 
+# Se ejecuta cuando hay un push a la rama main
 on:
   push:
     branches:
@@ -10,22 +12,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Descarga el código del repositorio
       - name: Descargar proyecto
         uses: actions/checkout@v4
 
+      # Configura Node.js
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # Instala las dependencias
       - name: Instalar dependencias
         run: npm install
 
-      - name: Build
-        run: echo "Build completado correctamente"
-
+      # Verifica la sintaxis del proyecto
       - name: Test
         run: node --check server.js
 
+      # Construye la imagen Docker
+      - name: Build Docker
+        run: docker build -t payphone .
+
+      # Verifica que la imagen fue creada
+      - name: Verificar imagen Docker
+        run: docker images
+
+      # Simulación del despliegue
       - name: Deploy
-        run: echo "Despliegue realizado correctamente"
+        run: echo "Imagen Docker creada correctamente. Lista para desplegar."
