@@ -104,7 +104,7 @@ app.get("/response-payphone", async (req, res) => {
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: linear-gradient(135deg, #eef2f7, #dce3ec);
+    background: linear-gradient(135deg, #f8ddf2, #d8e5f7);
     height: 100vh;
     display: flex;
     justify-content: center;
