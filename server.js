@@ -154,7 +154,7 @@ h1 {
 .btn {
     display: block;
     margin-top: 25px;
-    background: #e91e63;
+    background: #e891ae;
     color: white;
     padding: 14px;
     border-radius: 30px;
