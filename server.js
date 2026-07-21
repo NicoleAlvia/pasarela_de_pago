@@ -171,7 +171,7 @@ h1 {
 
     <h1>¡Pago Exitoso!</h1>
     <p class="subtitle">
-        Gracias por tu compra en Manta Eventos. La transacción se realizó correctamente.
+        ¡Tu pago se ha procesado con éxito! Gracias por tu compra. A continuación, encontrarás los detalles de tu transacción:
     </p>
 
     <div class="details">
